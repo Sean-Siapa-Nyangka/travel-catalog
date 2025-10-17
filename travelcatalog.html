@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Sets the character encoding (so special letters show correctly) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes page fit mobile screens -->
+  <title>GIU Home</title>
+
+  <style>
+    /* Remove default margins and set font for the whole page */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;               /* Make body take full screen height */
+      display: flex;               /* Use flexbox layout */
+      flex-direction: column;      /* Stack items vertically (nav on top, content below) */
+    }
+
+    /* Top navigation bar (blue box at top) */
+    .top-box {
+      background-color: #003366;   /* Dark blue color */
+      padding: 15px 0;             /* Space inside the bar (top & bottom) */
+      display: flex;               /* Use flexbox for layout */
+      justify-content: center;     /* Center the links horizontally */
+      gap: 40px;                   /* Space between links */
+      position: fixed;             /* Keep it stuck to the top even when scrolling */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;               /* Make sure it stays above everything else */
+    }
+
+    /* Navigation links (Home, Finland, Norway) */
+    .top-box a {
+      color: white;                /* Text color */
+      text-decoration: none;       /* Remove underline */
+      font-size: 18px;             /* Font size */
+      font-weight: bold;           /* Make text bold */
+      transition: color 0.3s;      /* Smooth color change when hovering */
+    }
+
+    /* When hovering over links */
+    .top-box a:hover {
+      color: #66a3ff;              /* Change to light blue when hovered */
+    }
+
+    /* Content area (the main part of the page) */
+    .content {
+      flex: 1;                     /* Fill the rest of the screen */
+      display: flex;               /* Flexbox again for centering */
+      flex-direction: column;      /* Stack text and image vertically */
+      justify-content: center;     /* Center vertically */
+      align-items: center;         /* Center horizontally */
+      text-align: center;          /* Center the text */
+      padding-top: 80px;           /* Add space so text isn’t hidden under the fixed nav bar */
+    }
+
+    /* Image styling */
+    img {
+      width: 600px;                /* Image width */
+      height: 350px;               /* Image height */
+      object-fit: cover;           /* Crop image nicely if size doesn’t match */
+      border-radius: 10px;         /* Rounded corners */
+      margin-top: 20px;            /* Space between text and image */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar at the top -->
+  <div class="top-box">
+    <a href="travel catalog.html">Home</a>  <!--Link to Home page-->
+    <a href="finland.html">Finland</a>      <!-- Link to Finland page -->
+    <a href="Swiss.html">Switzerland</a> <!-- Link to Swiss page -->
+    <a href="GIU.html">GIU</a>   <!-- Link to GIU page -->
+  </div>
+
+  <!-- Main content in the center -->
+  <div class="content">
+    <h1>My Travel Catalog</h1> <!-- Page title -->
+    <p>These are some of the places I went to (or the places I want to visit).</p> <!-- Description -->
+    <p>Click into the buttons in the navigation bar to get started!</p>
+  </div>
+
+</body>
+</html>
